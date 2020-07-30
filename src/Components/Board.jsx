@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const Space = styled.div`
   width: 100%;
   height: 100%;
+  background-color: blue;
 `;
 
 export default function Board({ onClickBoard, memos }) {
@@ -15,5 +16,9 @@ export default function Board({ onClickBoard, memos }) {
     const y = event.clientY - ry;
     onClickBoard({ x, y });
   }
-  return <Space onContextMenu={handleClickBoard}></Space>;
+  return (
+    <Space onContextMenu={handleClickBoard}>
+      {memos && memos.map((memo) => <p key={memo.id}>{memo.content}</p>)}
+    </Space>
+  );
 }

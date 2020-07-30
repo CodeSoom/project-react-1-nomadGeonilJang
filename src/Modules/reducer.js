@@ -1,4 +1,5 @@
 const initialState = {
+  newId: 0,
   memos: [],
 };
 
@@ -6,7 +7,8 @@ const reducers = {
   newMemo(state, { payload }) {
     return {
       ...state,
-      memos: state.memos.concat([{ ...payload, content: '' }]),
+      newId: state.newId + 1,
+      memos: state.memos.concat([{ ...payload, id: state.newId, content: '' }]),
     };
   },
 };

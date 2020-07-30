@@ -2,11 +2,23 @@ import React from 'react';
 import { render } from '@testing-library/react';
 
 import BoardContainer from './BoardContainer';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
-test('redner BoardContainer', () => {
+describe('BoardContainer', () => {
   const dispatch = jest.fn();
-  useDispatch.mockImplementation(() => dispatch);
+  beforeEach(() => {
+    dispatch.mockClear();
+    useDispatch.mockImplementation(() => dispatch);
+    useSelector.mockImplementation((selector) =>
+      selector({
+        memos: [],
+      })
+    );
+  });
 
-  const { getByText } = render(<BoardContainer />);
+  describe('render BoardContainer with memos', () => {
+    it('show memo content', () => {
+      const { getByText } = render(<BoardContainer />);
+    });
+  });
 });
