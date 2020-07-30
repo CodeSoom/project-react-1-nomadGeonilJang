@@ -1,10 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Memo from './Memo';
+
 const Space = styled.div`
   width: 100%;
   height: 100%;
   background-color: red;
+  overflow: auto;
 `;
 
 export default function Board({ onClickBoard, memos }) {
@@ -18,7 +21,7 @@ export default function Board({ onClickBoard, memos }) {
   }
   return (
     <Space onContextMenu={handleClickBoard}>
-      {memos && memos.map((memo) => <p key={memo.id}>{memo.content}</p>)}
+      {memos && memos.map((memo) => <Memo key={memo.id} memo={memo} />)}
     </Space>
   );
 }
