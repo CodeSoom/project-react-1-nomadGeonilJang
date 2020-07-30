@@ -7,6 +7,8 @@ const GlobalStyles = createGlobalStyle`
         box-sizing:border-box;
     }
     body{
+        width:100vw;
+        height:100vh;
         font-size:14px;
         background-color:#ffd400;
         font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
