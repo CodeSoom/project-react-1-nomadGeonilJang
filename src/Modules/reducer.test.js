@@ -13,7 +13,7 @@ describe('reducer', () => {
       expect(state.memos[0]).toEqual({
         x: 1,
         y: 1,
-        content: '',
+        content: '1',
       });
     });
   });
