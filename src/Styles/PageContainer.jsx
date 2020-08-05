@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../index.css';
 import styled from 'styled-components';
 
 const Container = styled.section`
