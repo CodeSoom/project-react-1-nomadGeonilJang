@@ -4,12 +4,12 @@ import { Provider } from 'react-redux';
 
 // import store from './Modules/store';
 
-// import GlobalStyles from './Styles/GlobalStyles';
+import GlobalStyles from './Styles/GlobalStyles';
 import App from './App';
 
 ReactDOM.render(
   <>
-    {/* <GlobalStyles /> */}
+    <GlobalStyles />
     <App />
   </>,
   document.querySelector('#app')
