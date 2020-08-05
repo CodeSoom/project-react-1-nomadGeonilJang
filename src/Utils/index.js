@@ -1,9 +1,9 @@
 export function get(key) {
   return (state) => state[key];
 }
-export function get(key) {
-  return (state) => state.chat[key];
-}
+// export function get(key) {
+//   return (state) => state.chat[key];
+// }
 
 export function getYMD(date) {
   return date.slice(0, 10);
