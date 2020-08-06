@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
-import ChatListContainer from '../containers/ChatListContainer';
+
 import { useDispatch } from 'react-redux';
+
+import ChatListContainer from '../containers/ChatListContainer';
 
 import { loadChatList } from '../modules/reducer/actions';
 
@@ -10,5 +12,6 @@ export default function ChatListPage() {
   useEffect(() => {
     dispatch(loadChatList());
   }, [dispatch]);
+
   return <ChatListContainer />;
 }

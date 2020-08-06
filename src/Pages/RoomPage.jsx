@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react';
-import RoomContainer from '../containers/RoomContainer';
+
 import { useDispatch } from 'react-redux';
+
 import { loadChats } from '../modules/reducer/actions';
+
+import RoomContainer from '../containers/RoomContainer';
 
 export default function RoomPage({ match: { params } }) {
   const dispatch = useDispatch();
@@ -11,5 +14,6 @@ export default function RoomPage({ match: { params } }) {
       dispatch(loadChats({ id: params.id }));
     }
   }, [params.id, dispatch]);
+
   return <RoomContainer />;
 }

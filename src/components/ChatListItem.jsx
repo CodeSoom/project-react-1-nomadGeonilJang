@@ -1,6 +1,9 @@
 import React from 'react';
+
 import styled from 'styled-components';
+
 import Bedge from '../modules/styles/Badge';
+
 const imagePath = '/dist/images/myImg.png';
 
 const Container = styled.div`

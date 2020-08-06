@@ -1,10 +1,14 @@
 import React, { useLayoutEffect, useRef, useEffect } from 'react';
-import styled from 'styled-components';
+
 import { useSelector } from 'react-redux';
-import { get } from '../utils';
+
+import styled from 'styled-components';
+
 import ChatForm from './ChatForm';
 import ImageSelector from './ImageSelector';
 import ImageChat from './ImageChat';
+
+import { get } from '../utils';
 
 const Container = styled.div`
   z-index: 10;

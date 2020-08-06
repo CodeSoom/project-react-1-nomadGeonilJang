@@ -1,6 +1,9 @@
 import React from 'react';
+
 import styled from 'styled-components';
+
 const imagePath = '/dist/images/myImg.png';
+
 const Container = styled.div`
   z-index: 0;
   background-color: red;
