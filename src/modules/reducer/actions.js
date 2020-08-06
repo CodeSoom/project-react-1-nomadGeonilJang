@@ -5,6 +5,7 @@ export const setChatList = (list) => ({
   type: 'setChatList',
   payload: { rooms: list },
 });
+
 export const loadChatList = () => (dispatch) => {
   dispatch(setChatList(db.rooms));
 };
@@ -15,6 +16,7 @@ export const setRoom = (room) => {
     payload: { room },
   };
 };
+
 export const loadChats = ({ id }) => (dispatch) => {
   const room = db.rooms.find((room) => room.id === id);
   dispatch(setRoom(room));
@@ -53,6 +55,7 @@ export const setRoomImages = (images) => ({
   type: 'setRoomImages',
   payload: { images },
 });
+
 export const loadRoomImages = () => (dispatch) => {
   //서버에서 이미지 받아오는 방식으로
   console.log(db.roomImages);
