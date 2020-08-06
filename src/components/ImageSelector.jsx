@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-const imagePath = 'http://localhost:8080/b0b855b0bcf415ae60d5492a12f66d19.png';
+const imagePath = '/dist/images/myImg.png';
 const ImageSelect = styled.div`
   box-sizing: border-box;
   border-radius: 5px;

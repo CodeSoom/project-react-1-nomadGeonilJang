@@ -55,7 +55,7 @@ export default function RoomContainer() {
     dispatch(selectImg(id));
   }
 
-  leftOnlyLastTime(room);
+  // leftOnlyLastTime(room);
 
   return (
     <Room

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useLayoutEffect, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 import { get } from '../utils';
@@ -23,9 +23,6 @@ const Container = styled.div`
 const ChatList = styled.ul`
   padding-top: 5px;
 
-  /* height: 610px; */
-  overflow: auto;
-
   -ms-overflow-style: none;
   scrollbar-width: none;
   &::-webkit-scrollbar {
@@ -42,11 +39,19 @@ const Chat = styled.li`
   justify-content: ${(props) => props.location};
 `;
 const Me = styled.div`
+  max-width: 200px;
+  max-height: 200px;
+  overflow: auto;
+  word-break: break-all;
+
   background-color: var(--color-purple);
   color: var(--color-white);
   line-height: 18px;
   padding: 10px;
   border-radius: 15px;
+
+  white-space: wrap;
+
   -webkit-box-shadow: 3px 3px 5px 0px rgba(199, 199, 199, 1);
   -moz-box-shadow: 3px 3px 5px 0px rgba(199, 199, 199, 1);
   box-shadow: 3px 3px 5px 0px rgba(199, 199, 199, 1);
@@ -56,6 +61,7 @@ const You = styled.div`
   background-color: var(--color-white);
   line-height: 18px;
   border-radius: 15px;
+
   -webkit-box-shadow: 3px 3px 5px 0px rgba(199, 199, 199, 1);
   -moz-box-shadow: 3px 3px 5px 0px rgba(199, 199, 199, 1);
   box-shadow: 3px 3px 5px 0px rgba(199, 199, 199, 1);
@@ -121,6 +127,10 @@ export default function Room({
     }
   }, [room]);
 
+  useLayoutEffect(() => {
+    console.log(1);
+  });
+
   return (
     <Container ref={scrollRef}>
       <ImageSelector
@@ -136,7 +146,6 @@ export default function Room({
                 <ul>
                   {chat.chats &&
                     chat.chats.map((talk, index) => {
-                      console.log(talk);
                       return talk.author === title ? (
                         <Chat key={talk.time + index} location={'flex-start'}>
                           <You>{talk.content}</You>

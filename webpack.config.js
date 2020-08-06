@@ -17,6 +17,11 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx'],
   },
+  output: {
+    filename: 'main.js',
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
+  },
   devServer: {
     historyApiFallback: {
       index: 'index.html',
