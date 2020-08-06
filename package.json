@@ -1,0 +1,50 @@
+{
+  "name": "project-react-1-nomadgeoniljang",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "babel-loader": "^8.1.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-icons": "^3.10.0",
+    "react-redux": "^7.2.1",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^5.1.1",
+    "styled-reset": "^4.2.1",
+    "webpack": "^4.44.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "@testing-library/jest-dom": "^5.11.2",
+    "@testing-library/react": "^10.4.7",
+    "@types/jest": "^26.0.7",
+    "css-loader": "^4.2.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^6.0.0",
+    "jest": "^26.1.0",
+    "jest-plugin-context": "^2.9.0",
+    "style-loader": "^1.2.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "scripts": {
+    "start": "webpack-dev-server",
+    "test": "jest --watchAll --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nomadGeonilJang/project-react-1-nomadGeonilJang.git"
+  },
+  "author": "GeonilJang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nomadGeonilJang/project-react-1-nomadGeonilJang/issues"
+  },
+  "homepage": "https://github.com/nomadGeonilJang/project-react-1-nomadGeonilJang#readme"
+}
