@@ -40,9 +40,7 @@ export default function ChatForm({ roomId, value, onChange, name, onSubmit }) {
   return (
     <Container>
       <form
-        onSubmit={(event) => {
-          handleSubmit(event);
-        }}
+        onSubmit={handleSubmit}
       >
         <Input
           placeholder={'메세지를 입력하세요.'}
